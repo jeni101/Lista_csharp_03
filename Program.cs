@@ -2,6 +2,9 @@
 using VeiculosApp;
 using SeuProjeto.Models;
 using EmpresaApp.Models;
+using FormasApp;
+using InstrumentoApp;
+using EletronicoApp;
 
 
 
@@ -48,6 +51,39 @@ public class Program
         d1.ExibirDados();
         Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
+        Forma quadrado = new Quadrado(4);
+        Forma triangulo = new Triangulo(6, 3);
+
+        Console.WriteLine($"Área do quadrado: {quadrado.CalcularArea()}");
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        Console.WriteLine($"Área do triângulo: {triangulo.CalcularArea()}");
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+
+
+        InstrumentoMusical guitarra = new Guitarra("Guitarra");
+        guitarra.Tocar();
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        InstrumentoMusical bateria = new Bateria("Bateria");
+        bateria.Tocar();
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+    
+ 
+
+        Eletronico celular = new Smartphone("iPhone 15");
+        celular.Ligar();
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        Eletronico notebook = new Notebook("Dell Inspiron");
+        notebook.Ligar();
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+    
+
+        
     }
 }
 
+
+    
