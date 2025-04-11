@@ -5,6 +5,8 @@ using EmpresaApp.Models;
 using FormasApp;
 using InstrumentoApp;
 using EletronicoApp;
+using MidiaApp;
+using BancoApp.Models;
 
 
 
@@ -79,8 +81,28 @@ public class Program
         notebook.Ligar();
         Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
-    
 
+        CD cd = new CD("Greatest Hits", "Queen", 17);
+        DVD dvd = new DVD("O Senhor dos Anéis", "Peter Jackson", 210);
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        Console.WriteLine("\nCD:");
+        cd.ExibirDetalhes();
+
+        Console.WriteLine("\nDVD:");
+        dvd.ExibirDetalhes();
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");    
+
+
+        ContaCorrente contaCorrente = new ContaCorrente("João", 1000);
+        contaCorrente.Depositar(200);
+        contaCorrente.Sacar(300);
+
+        
+        Console.WriteLine("\n =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        ContaPoupanca contaPoupanca = new ContaPoupanca("Maria", 800);
+        contaPoupanca.Depositar(100);
+        contaPoupanca.Sacar(950);
         
     }
 }
